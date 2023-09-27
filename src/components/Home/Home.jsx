@@ -1,11 +1,12 @@
 
-import Button from '../UI/Button';
-import languages from '../data/languages.json';
-import {IoIosArrowForward} from 'react-icons/io'
+
+import MarqueeButtons from '../UI/MarqueeButtons';
+
+
 
 
 const Home = () => {
-    const { main: mainLanguages } = languages;
+    
 
   return (
     <div className="flex flex-col items-center justify-center h-[80vh] relative ">
@@ -21,16 +22,7 @@ const Home = () => {
         <p className="mt-4 text-lg ">Discover exciting repositories to contribute to in this year&apos;s<span className="underline "> Hacktoberfest! </span> 🚀🌟</p>
 </div>
  
- <div className="flex items-center justify-center">
-  <div className="flex w-[75%] overflow-x-auto">
-    {mainLanguages.map((lang) => {
-      return <Button lang={lang} key={lang} />;
-    })}
-  </div>
-  <span className='btn btn-circle ml-4'>
-    <IoIosArrowForward />
-  </span>
-</div>
+<MarqueeButtons />
 <div className="absolute bottom-0">
 <div className="relative group m-3 w-fit inline-block">
   <div className="absolute -inset-0 bg-purple-500 via-blue-500 rounded-lg blur opacity-25 opacity-100 transition duration-1000 group-hover:duration-200"></div>
