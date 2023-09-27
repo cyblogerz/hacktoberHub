@@ -1,4 +1,4 @@
-import {BsGithub} from 'react-icons/bs'
+import {BsGithub,BsSearch} from 'react-icons/bs'
 const NavBar = () => {
   return (
     <div className="navbar bg-base-100 shadow-lg">
@@ -6,10 +6,11 @@ const NavBar = () => {
     <a className="btn btn-ghost normal-case text-xl">hacktoberHub 🏆 </a>
   </div>
   <div className="flex-none gap-2">
-    <div className="form-control">
-      <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto" />
-    </div>
-    <div className="btn btn-ghost ">
+  <a className="btn  normal-case">Contribute</a>
+  <button className="btn btn-ghost btn-circle">
+      <BsSearch className='w-5 h-5'/>
+    </button>
+    <div className="btn btn-ghost btn-circle">
         <BsGithub className='w-7 h-7'/>
     </div>
   </div>
