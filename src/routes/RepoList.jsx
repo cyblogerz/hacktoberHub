@@ -6,17 +6,15 @@ const RepoList = () => {
   const { lang } = useParams();
   const apiUrl = `https://api.github.com/search/repositories?q=topic%3Ahacktoberfest+language%3A${lang}&per_page=21`;
 
-  // State to store the fetched data
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Fetch data from the GitHub API
+
     fetch(apiUrl)
       .then((response) => response.json())
       .then((data) => {
-        // Set the fetched data in the state and mark loading as false
-        setRepos(data.items || []); // Ensure 'repos' is an array or an empty array if undefined
+        setRepos(data.items || []);
         setLoading(false);
       })
       .catch((error) => {
