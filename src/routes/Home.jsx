@@ -9,7 +9,9 @@ const Home = () => {
     
 
   return (
-    <div className="flex flex-col items-center justify-center h-[80vh] relative ">
+    <div className='h-screen'>
+    <div className="flex flex-col items-center justify-center h-[80%] relative ">
+    
     <div className="mb-20 text-center w-[80%]">
     <p className="text-6xl">🧑🏻‍💻</p>
         <h1 className="text-6xl font-bold ">Select your </h1>
@@ -35,6 +37,7 @@ const Home = () => {
 </div>
 </div>
 
+    </div>
     </div>
   )
 }
