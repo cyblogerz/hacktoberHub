@@ -19,19 +19,19 @@ This website simplifies your Hacktoberfest journey by providing an easy-to-navig
 
 ### Dark Mode
 
-
+|  |  |
 |-------------|-------------|
 | ![Dark Mode 1](/readme-assets/image.png) | ![Dark Mode 2](/readme-assets/image-4.png) |
 
 ### Light Mode
 
-
+| Home | Repo List |
 |-------------|-------------|
 | ![Dark Mode 1](/readme-assets/image-1.png) | ![Dark Mode 2](/readme-assets/image-5.png) |
 
 ### Cupcake Mode
 
-
+| Home | Repo List |
 |-------------|-------------|
 | ![Dark Mode 1](/readme-assets/image-2.png) | ![Dark Mode 2](/readme-assets/image-3.png) |
 
