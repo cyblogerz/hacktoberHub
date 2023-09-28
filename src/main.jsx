@@ -14,10 +14,12 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
-    children:[{
+    children:[
+      {
       path : '/',
       element: <Home />
-    },{
+    },
+    {
       path:"repos/:lang",
       element:<RepoList />
     }

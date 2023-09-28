@@ -6,6 +6,8 @@
 // import {TbBrandCpp,TbBrandGolang} from 'react-icons/tb';
 // import {BiLogoJava} from 'react-icons/bi';
 
+import { Link } from "react-router-dom"
+
 
 
 // const getIconComponent = (lang) => {
@@ -46,11 +48,13 @@ const Button = ({lang}) => {
   return (
     <div className="relative group m-3 w-fit inline-block">
   <div className="absolute -inset-0 group-hover:bg-purple-500 via-blue-500 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+  <Link to={`/repos/${lang}`}>
   <button
     className='relative p-6  btn btn-lg text-white rounded-2xl leading-none transition duration-300 ring-2 ring-transparent hover:ring-blue-500 hover:shadow-md'
   >
     {lang}
   </button>
+  </Link>
 </div>
 
   )

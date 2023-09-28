@@ -1,9 +1,10 @@
 import {BsGithub,BsSearch} from 'react-icons/bs'
+import { Link } from 'react-router-dom'
 const NavBar = () => {
   return (
     <div className="navbar bg-base-100 shadow-lg">
   <div className="flex-1">
-    <a className="btn btn-ghost normal-case text-xl">hacktoberHub 🏆 </a>
+    <Link for="/" className="btn btn-ghost normal-case text-xl">hacktoberHub 🏆 </Link>
   </div>
   <div className="flex-none gap-2">
   <a className="btn  normal-case">Contribute</a>
