@@ -9,8 +9,9 @@ const Home = () => {
     
 
   return (
-    <div className='h-screen'>
-    <div className="flex flex-col items-center justify-center h-[80%] relative ">
+    <div className='container mx-auto w-full h-full pt-20'>
+  
+    <div className="flex flex-col  items-center justify-center min-h-screen relative ">
     
     <div className="mb-20 text-center w-[80%]">
     <p className="text-6xl">🧑🏻‍💻</p>
@@ -25,17 +26,9 @@ const Home = () => {
 </div>
  
 <MarqueeButtons />
-<div className="absolute bottom-0">
-<div className="relative group m-3 w-fit inline-block">
-  <div className="absolute -inset-0 bg-purple-500 via-blue-500 rounded-lg blur opacity-25 opacity-100 transition duration-1000 group-hover:duration-200"></div>
-  <div
-    className='relative p-6  btn btn-lg normal-case rounded-2xl leading-none transition duration-300 ring-2 ring-transparent hover:ring-blue-500 hover:shadow-md'
-  >
-    Other Languages
-    
-  </div>
-</div>
-</div>
+
+<button className="btn my-20 btn-primary normal-case text-xl ">Other Languages</button>
+
 
     </div>
     </div>

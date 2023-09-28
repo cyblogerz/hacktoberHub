@@ -1,5 +1,5 @@
 import  { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import RepoCard from "../components/UI/RepoCard";
 
 const RepoList = () => {
@@ -26,12 +26,12 @@ const RepoList = () => {
   }, [apiUrl]);
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto h-full pt-16">
     <div className="min-h-screen pt-5">
 
     <div className="text-center">
             <div className="w-5/6 max-w-md mx-auto">
-            <h1 className="mb-5 text-5xl font-bold uppercase">
+            <h1 className="mb-16 mt-10 text-4xl font-bold">
             Repositories for Language: {lang}
             </h1>
             </div>
@@ -54,6 +54,11 @@ const RepoList = () => {
       )}
       </div>
       </div>
+      <div className="w-full flex flex-row gap-4 justify-center items-center">
+      <button className="btn text-xl btn-primary my-10 ">Next Page</button>
+      <Link to='/' className="btn text-xl btn-secondary my-10 ">Go Home</Link>
+      </div>
+      
       </div>
    
   );
@@ -61,27 +66,3 @@ const RepoList = () => {
 
 export default RepoList;
 
-{/* <div className="container mx-auto">
-        <div className="min-h-screen pt-5">
-          <div className="text-center">
-            <div className="w-5/6 max-w-md mx-auto">
-              <h1 className="mb-5 text-5xl font-bold uppercase">
-                {repos.total_count} repositories for{' '}
-                <span className="font-mono text-2023-bavarian-gold-2">
-                  {router.query.q
-                    ? router.query.q + ' in ' + languageName
-                    : languageName}
-                </span>
-              </h1>
-            </div>
-          </div>
-          <Sort />
-          <StarsFilter />
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {repos.items.map(repo => (
-              <Card key={repo.id} repo={repo} />
-            ))}
-          </div>
-        </div>
-        <Pagination page={page} totalCount={repos.total_count} />
-      </div> */}

@@ -6,7 +6,7 @@ const NavBar = (props) => {
     props.onThemeChange(val,name)
   }
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 fixed shadow-md p-1 z-10 ">
     <div className="flex-1">
       <Link for="/"className="btn btn-ghost normal-case text-xl">hacktoberHub 🏆</Link>
     </div>
