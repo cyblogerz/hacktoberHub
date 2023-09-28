@@ -12,7 +12,7 @@ const Home = () => {
     <div className="flex flex-col items-center justify-center h-[80vh] relative ">
     <div className="mb-20 text-center w-[80%]">
     <p className="text-6xl">🧑🏻‍💻</p>
-        <h1 className="text-6xl font-bold text-white">Select your </h1>
+        <h1 className="text-6xl font-bold ">Select your </h1>
         <span className="inline-grid"><span className="normal-case col-start-1
          row-start-1 bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text opacity-70 blur-3xl [-webkit-text-fill-color:transparent] [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)] 
          text-6xl" aria-hidden="true">programming language</span> 

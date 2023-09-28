@@ -5,12 +5,7 @@ import languages from '../data/languages.json';
 const MarqueeButtons = () => {
  
   
-    const { main: mainLanguages } = languages;
-
-  
-
-
-    
+    const { main: mainLanguages } = languages
     
   return (
     <div className="flex items-center justify-center">

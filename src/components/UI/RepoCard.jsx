@@ -46,11 +46,11 @@ function RepoCard({repo}) {
               href={`https://github.com/topics/${topic}`}
               target="_blank"
               rel="noreferrer"
-              className={`badge ${
-                topic === 'hacktoberfest'
-                  ? 'bg-2023-bavarian-gold-1 text-2023-void-2'
-                  : 'bg-2023-bavarian-blue-2 text-2023-void-2'
-              }`}
+              className={`badge  ${
+    topic === 'hacktoberfest'
+      ? 'badge-secondary'
+      : 'badge-primary'
+  }`}
             >
               {topic}
             </a>

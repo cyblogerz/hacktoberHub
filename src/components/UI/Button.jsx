@@ -50,7 +50,7 @@ const Button = ({lang}) => {
   <div className="absolute -inset-0 group-hover:bg-purple-500 via-blue-500 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
   <Link to={`/repos/${lang}`}>
   <button
-    className='relative p-6  btn btn-lg text-white rounded-2xl leading-none transition duration-300 ring-2 ring-transparent hover:ring-blue-500 hover:shadow-md'
+    className='relative p-6  btn btn-lg  rounded-2xl leading-none transition duration-300 ring-2 ring-transparent hover:ring-blue-500 hover:shadow-md'
   >
     {lang}
   </button>
