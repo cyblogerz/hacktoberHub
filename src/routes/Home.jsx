@@ -1,6 +1,6 @@
 
 
-import MarqueeButtons from '../UI/MarqueeButtons';
+import MarqueeButtons from '../components/UI/MarqueeButtons';
 
 
 
