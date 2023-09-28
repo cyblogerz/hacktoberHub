@@ -12,7 +12,7 @@ This website simplifies your Hacktoberfest journey by providing an easy-to-navig
 
 - **Extensive Project Collection**: Access a diverse selection of projects participating in Hacktoberfest.
 - **Minimalistic UI**: Our user-friendly interface ensures a seamless browsing experience.
-- **Contributor Resources**: Access guides and tips to kickstart your open-source contributions.
+- **Contributor Resources**: Access guides and tips to kickstart your open-source contributions.[Not implemented yet]
 - **Themes**: Choose from a variety of themes to match your style
 
 ## Screenshots
