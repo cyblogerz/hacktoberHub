@@ -6,8 +6,9 @@ import { Outlet } from 'react-router-dom';
 
 const Root = () => {
   const [theme,setTheme] = useState("dark");
-  const themeHandler = (val) =>{
-    setTheme(val);
+  const themeHandler = (val,name) =>{
+    
+    setTheme(name);
   }
 
   return (

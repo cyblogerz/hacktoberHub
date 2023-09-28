@@ -1,10 +1,14 @@
-import {BsGithub,BsSearch} from 'react-icons/bs'
+/* eslint-disable react/prop-types */
 import { Link } from 'react-router-dom'
-const NavBar = () => {
+const NavBar = (props) => {
+  const clickHandler = (e) =>{
+    const {value:val,name} = e.target
+    props.onThemeChange(val,name)
+  }
   return (
     <div className="navbar bg-base-100">
     <div className="flex-1">
-      <a className="btn btn-ghost normal-case text-xl">hacktoberHub 🏆</a>
+      <Link for="/"className="btn btn-ghost normal-case text-xl">hacktoberHub 🏆</Link>
     </div>
     
       <div className="menu menu-horizontal px-1">
@@ -16,9 +20,9 @@ const NavBar = () => {
               Themes
             </summary>
             <ul className="p-2 bg-base-100">
-              <li><button className=''>Dark</button></li>
-              <li><button className=''>Light</button></li>
-              <li><button className=''>Cupcake</button></li>
+              <li><button className='' onClick={clickHandler} name='dark'>Dark</button></li>
+              <li><button className='' onClick={clickHandler} name='light'>Light</button></li>
+              <li><button className='' onClick={clickHandler} name='cupcake'>Cupcake</button></li>
             </ul>
           </details>
         </li>
