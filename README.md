@@ -21,19 +21,19 @@ This website simplifies your Hacktoberfest journey by providing an easy-to-navig
 
 | Home | Repo List |
 |-------------|-------------|
-| ![Dark Mode 1](image.png) | ![Dark Mode 2](screenshots/dark-mode-2.png) |
+| ![Dark Mode 1](image.png) | ![Dark Mode 2](image-4.png) |
 
 ### Light Mode
 
 | Home | Repo List |
 |-------------|-------------|
-| ![Dark Mode 1](image.png) | ![Dark Mode 2](screenshots/dark-mode-2.png) |
+| ![Dark Mode 1](image-1.png) | ![Dark Mode 2](![Alt text](image-5.png)) |
 
 ### Cupcake Mode
 
 | Home | Repo List |
 |-------------|-------------|
-| ![Dark Mode 1](image.png) | ![Dark Mode 2](screenshots/dark-mode-2.png) |
+| ![Dark Mode 1](image-2.png) | ![Dark Mode 2](![Alt text](image-3.png)) |
 
 
 ## Getting Started
