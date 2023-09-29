@@ -38,7 +38,7 @@ This website simplifies your Hacktoberfest journey by providing an easy-to-navig
 
 ## Getting Started
 
-1. Visit the [hacktoberHub](#) website.
+1. Visit the [hacktoberHub](https://hacktoberhub.netlify.app) website.
 2. Browse projects, filter by your interests, and find the perfect one to contribute to.
 3. Follow the project's guidelines and start contributing!
 4. Celebrate your contributions during Hacktoberfest 🎉.
