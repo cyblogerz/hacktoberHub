@@ -15,7 +15,7 @@ const LangModal = () => {
     <h3 className="font-bold text-lg mb-4">Languages</h3>
     <div className="grid grid-cols-2 overflow-x gap-2">
     {moreLangs.map((e) => (
-    <Link to='/' className={'btn'}key={e}>{e}</Link>
+    <Link to={`repos/${e}`} className={'btn btn-ghost normal-case'}key={e}>{e}</Link>
 ))}
 
     </div>
