@@ -7,7 +7,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Home from './routes/Home';
-import RepoList from './routes/repoList';
+import RepoList from './routes/RepoList';
 
 const router = createBrowserRouter([
   {
