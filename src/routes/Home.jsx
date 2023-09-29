@@ -1,6 +1,7 @@
 
 
 import MarqueeButtons from '../components/UI/MarqueeButtons';
+import OtherLangButton from '../components/modals/OtherLangButton';
 
 
 
@@ -26,9 +27,7 @@ const Home = () => {
 </div>
  
 <MarqueeButtons />
-
-<button className="btn my-20 btn-primary normal-case text-xl ">Other Languages</button>
-
+<OtherLangButton />
 
     </div>
     </div>
