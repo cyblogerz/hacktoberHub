@@ -12,7 +12,7 @@ const NavBar = (props) => {
     </div>
     
       <div className="menu menu-horizontal px-1">
-      <a className="btn  normal-case btn-ghost">Blogs</a>
+      <Link to="/blogs/" className="btn  normal-case btn-ghost">Blogs</Link>
      <a className="btn  normal-case btn-ghost">Contribute</a>
         <li>
           <details>

@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Home from './routes/Home';
 import RepoList from './routes/RepoList';
+import Blogs from './routes/Blogs';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,11 @@ const router = createBrowserRouter([
     {
       path:"repos/:lang",
       element:<RepoList />
+    },
+    {
+      path: "/blogs/",
+    element: <Blogs/>,
+
     }
   ]
   },

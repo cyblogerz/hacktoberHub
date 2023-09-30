@@ -11,7 +11,7 @@ const Root = () => {
   }
 
   return (
-    <div data-theme={theme} className='min-h-screen'>
+    <div data-theme={theme} className='min-h-screen font-mono'>
     <NavBar  onThemeChange={themeHandler}/>
     <Outlet />
     </div>

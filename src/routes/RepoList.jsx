@@ -1,6 +1,7 @@
 import  { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import RepoCard from "../components/UI/RepoCard";
+import GradientText from "../components/GradientText";
 
 const RepoList = () => {
   const { lang } = useParams();
@@ -28,10 +29,11 @@ const RepoList = () => {
     <div className="min-h-screen pt-5">
 
     <div className="text-center">
-            <div className="w-5/6 max-w-md mx-auto">
-            <h1 className="mb-16 mt-10 text-4xl font-bold">
-            Repositories for Language: {lang}
+            <div className="w-5/6 max-w-md mx-auto mb-10">
+            <h1 className="mb-2 mt-10 text-4xl font-mono">
+            Repositories for : 
             </h1>
+            <GradientText text={lang}/>
             </div>
            
       
@@ -53,8 +55,8 @@ const RepoList = () => {
       </div>
       </div>
       <div className="w-full flex flex-row gap-4 justify-center items-center">
-      <button className="btn text-xl btn-primary my-10 ">Next Page</button>
-      <Link to='/' className="btn text-xl btn-secondary my-10 ">Go Home</Link>
+      <button className="btn  btn-primary my-10 ">Next Page</button>
+      <Link to='/' className="btn  btn-secondary my-10 ">Go Home</Link>
       </div>
       
       </div>
