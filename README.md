@@ -1,6 +1,6 @@
 # HacktoberHub 🚀
 
-Welcome to the Hacktoberfest Project Explorer! 🌟
+Welcome to  hacktoberHub-the Hacktoberfest Project Explorer! 🌟
 
 ## About
 
