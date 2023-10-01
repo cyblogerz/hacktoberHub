@@ -15,25 +15,6 @@ This website simplifies your Hacktoberfest journey by providing an easy-to-navig
 - **Contributor Resources**: Access guides and tips to kickstart your open-source contributions.[Not implemented yet]
 - **Themes**: Choose from a variety of themes to match your style
 
-## Screenshots
-
-### Dark Mode
-
-|  |  |
-|-------------|-------------|
-| ![Dark Mode 1](/readme-assets/image.png) | ![Dark Mode 2](/readme-assets/image-4.png) |
-
-### Light Mode
-
-|  |  |
-|-------------|-------------|
-| ![Dark Mode 1](/readme-assets/image-1.png) | ![Dark Mode 2](/readme-assets/image-5.png) |
-
-### Cupcake Mode
-
-|  |  |
-|-------------|-------------|
-| ![Dark Mode 1](/readme-assets/image-2.png) | ![Dark Mode 2](/readme-assets/image-3.png) |
 
 
 ## Getting Started
