@@ -8,41 +8,6 @@
 
 import { Link } from "react-router-dom"
 
-
-
-// const getIconComponent = (lang) => {
-//   switch (lang) {
-//     case "JavaScript":
-//       return <RiJavascriptFill />;
-//     case "Python":
-//       return <FaPython />;
-//     case "C":
-//       return <SiCodio />;
-//     case "C++":
-//       return <TbBrandCpp />;
-//     case "GoLang":
-//       return <TbBrandGolang />;
-//     case "Rust":
-//       return <FaRust />;
-//     case "HTML":
-//       return <AiFillHtml5 />;
-//     case "TypeScript":
-//       return <SiTypescript />;
-//     case "Dart":
-//       return <SiDart />;
-//     case "Java":
-//       return <BiLogoJava />;
-//     case "Elixir":
-//       return <SiElixir />;
-//     case "Ruby":
-//       return <SiRuby />;
-//     default:
-//       return null; // Return null for unknown languages
-//   }
-// };
-
-
-
 const Button = ({lang}) => { 
     // const IconComponent = getIconComponent(lang)
   return (

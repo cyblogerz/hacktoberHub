@@ -1,6 +1,7 @@
 import  { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import RepoCard from "../components/UI/RepoCard";
+import AnimatedText from "../components/UI/AnimatedText";
 
 
 const RepoList = () => {
@@ -33,9 +34,11 @@ const RepoList = () => {
             <h1 className="mb-2 mt-10 text-4xl font-mono">
             Repositories for : 
             </h1>
-            <p className="btn btn-ghost normal-case  font-bold text-5xl text-primary">{lang}_</p>
+            <p className="btn btn-ghost normal-case  font-bold text-5xl text-primary">
+              <AnimatedText lang={lang} />
+            </p>
             </div>
-
+        
       
       {loading ? (
         <p className="text-center">Loading...</p>
