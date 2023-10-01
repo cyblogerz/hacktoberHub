@@ -8,7 +8,7 @@ const NavBar = (props) => {
   return (
     <div className="navbar bg-base-100 fixed shadow-md p-1 z-10 ">
     <div className="flex-1">
-      <Link for="/"className="btn btn-ghost normal-case text-xl">hacktoberHub 🏆</Link>
+      <Link for="/"className="btn btn-ghost normal-case text-xl">🏆 hacktoberHub</Link>
     </div>
     
       <div className="menu menu-horizontal px-1">

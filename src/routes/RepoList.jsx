@@ -1,7 +1,7 @@
 import  { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import RepoCard from "../components/UI/RepoCard";
-import GradientText from "../components/GradientText";
+
 
 const RepoList = () => {
   const { lang } = useParams();
@@ -33,9 +33,9 @@ const RepoList = () => {
             <h1 className="mb-2 mt-10 text-4xl font-mono">
             Repositories for : 
             </h1>
-            <GradientText text={lang}/>
+            <p className="btn btn-ghost normal-case  font-bold text-5xl text-primary">{lang}_</p>
             </div>
-           
+
       
       {loading ? (
         <p className="text-center">Loading...</p>
