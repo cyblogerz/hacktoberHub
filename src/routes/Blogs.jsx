@@ -1,19 +1,22 @@
 
 const Blogs = () => {
   return (
-    <div className="grid grid-cols-3 container">
-        <div className="grid grid-rows">
-        <button className="btn btn-shadow">
+    <div className="grid grid-cols-3 container mx-auto pt-20 ">
+        <div className="grid grid-rows w-1/2 gap-2 ">
+        <button className="btn btn-shadow ">
             🏡 Home
         </button>
         <button className="btn btn-ghost">
-            🏡 Home
+            🔥 Trending
         </button>
         <button className="btn btn-ghost">
-            🏡 Home
+            📕 Resources
         </button>
         <button className="btn btn-ghost">
-            🏡 Home
+            🤓 Getting started
+        </button>
+        <button className="btn btn-ghost">
+            🧑🏻‍💻 About
         </button>
         </div>
     </div>
