@@ -2,9 +2,9 @@
 
 import { Link, useParams } from "react-router-dom";
 import RepoCard from "../components/UI/RepoCard";
-import AnimatedText from "../components/UI/AnimatedText";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import axios from "axios";
+import RepoListHeader from "../components/RepoListHeader";
 
 const ThrowError = ({ error }) => {
   if (
@@ -57,14 +57,7 @@ const RepoList = () => {
     <div className="container mx-auto h-full pt-16">
       <div className="min-h-screen pt-5">
         <div className="text-center">
-          <div className="w-5/6 max-w-md mx-auto mb-10">
-            <h1 className="mb-2 mt-10 text-4xl font-mono">
-              Repositories for :
-            </h1>
-            <p className="btn btn-ghost normal-case  font-bold text-5xl text-primary">
-              <AnimatedText lang={lang} />
-            </p>
-          </div>
+          <RepoListHeader lang={lang}/>
           {error && <ThrowError error={error} />}
           {isLoading && <p className="text-center">Loading...</p>}
           {error && <p>Oops something went wrong</p>}
