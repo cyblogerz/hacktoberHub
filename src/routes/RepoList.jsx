@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint-disable react/prop-types */
+
 import { Link, useParams } from "react-router-dom";
 import RepoCard from "../components/UI/RepoCard";
 import AnimatedText from "../components/UI/AnimatedText";
