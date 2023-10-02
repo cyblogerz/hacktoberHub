@@ -1,27 +1,56 @@
-import { useState, useEffect } from "react";
+import React from "react";
 import { Link, useParams } from "react-router-dom";
 import RepoCard from "../components/UI/RepoCard";
 import AnimatedText from "../components/UI/AnimatedText";
-import { useQuery } from "@tanstack/react-query";
+import { useInfiniteQuery } from "@tanstack/react-query";
 import axios from "axios";
 
-const fetchRepo = async (apiUrl) => {
-  const response = await axios.get(apiUrl);
+const ThrowError = ({ error }) => {
+  if (
+    error.response.data.message.split(" ").slice(0, 3).join(" ") ===
+    "API rate limit"
+  ) {
+    return (
+      <p className="text-red-400">
+        We have hit a rate limit , service will be resumed shortly
+      </p>
+    );
+  }
 
-  return response.data.items;
+  return <p className="text-red-400">OOPS something went wrong</p>;
 };
 
 const RepoList = () => {
   const { lang } = useParams();
 
-  const apiUrl = `https://api.github.com/search/repositories?q=topic%3Ahacktoberfest+language%3A${lang}&per_page=21&page=1`;
+  const fetchRepo = async (page) => {
+    const apiUrl = `https://api.github.com/search/repositories?q=topic%3Ahacktoberfest+language%3A${lang}&per_page=21&page=${page}`;
+    const response = await axios.get(apiUrl);
 
-  const { data, error, isLoading } = useQuery({
-    queryKey: ["repo"],
-    queryFn: () => fetchRepo(apiUrl),
-  });
+    return response.data.items;
+  };
 
-  console.log("data hai", data);
+  const {
+    data,
+    error,
+    isLoading,
+    fetchNextPage,
+    hasNextPage,
+    isFetchingNextPage,
+  } = useInfiniteQuery(
+    ["Repo", lang],
+    async ({ pageParam = 1 }) => {
+      const response = await fetchRepo(pageParam);
+      return response;
+    },
+    {
+      getNextPageParam: (_, next) => {
+        return next.length + 1;
+      },
+    }
+  );
+
+  if (error) console.log(error);
 
   return (
     <div className="container mx-auto h-full pt-16">
@@ -35,22 +64,30 @@ const RepoList = () => {
               <AnimatedText lang={lang} />
             </p>
           </div>
-
-          {isLoading ? (
-            <p className="text-center">Loading...</p>
-          ) : (
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {Array.isArray(data) && data.length > 0 ? (
-                data.map((repo) => <RepoCard repo={repo} key={repo.id} />)
-              ) : (
-                <p>No repositories found.</p>
+          {error && <ThrowError error={error} />}
+          {isLoading && <p className="text-center">Loading...</p>}
+          {error && <p>Oops something went wrong</p>}
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {data &&
+              data.pages.map((page) =>
+                page?.map((repo) => <RepoCard repo={repo} key={repo.id} />)
               )}
-            </div>
-          )}
+          </div>
         </div>
       </div>
+
       <div className="w-full flex flex-row gap-4 justify-center items-center">
-        <button className="btn  btn-primary my-10 ">Next Page</button>
+        <button
+          className="btn  btn-primary my-10 "
+          onClick={() => fetchNextPage()}
+        >
+          {" "}
+          {isFetchingNextPage
+            ? "Loading more..."
+            : hasNextPage
+            ? "Next Page"
+            : "Nothing more to load"}
+        </button>
         <Link to="/" className="btn  btn-secondary my-10 ">
           Go Home
         </Link>
