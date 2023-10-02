@@ -1,71 +1,99 @@
-import  { useState, useEffect } from "react";
+import React from "react";
 import { Link, useParams } from "react-router-dom";
 import RepoCard from "../components/UI/RepoCard";
 import AnimatedText from "../components/UI/AnimatedText";
+import { useInfiniteQuery } from "@tanstack/react-query";
+import axios from "axios";
 
+const ThrowError = ({ error }) => {
+  if (
+    error.response.data.message.split(" ").slice(0, 3).join(" ") ===
+    "API rate limit"
+  ) {
+    return (
+      <p className="text-red-400">
+        We have hit a rate limit , service will be resumed shortly
+      </p>
+    );
+  }
+
+  return <p className="text-red-400">OOPS something went wrong</p>;
+};
 
 const RepoList = () => {
   const { lang } = useParams();
-  const apiUrl = `https://api.github.com/search/repositories?q=topic%3Ahacktoberfest+language%3A${lang}&per_page=21`;
 
-  const [repos, setRepos] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const fetchRepo = async (page) => {
+    const apiUrl = `https://api.github.com/search/repositories?q=topic%3Ahacktoberfest+language%3A${lang}&per_page=21&page=${page}`;
+    const response = await axios.get(apiUrl);
 
-  useEffect(() => {
+    return response.data.items;
+  };
 
-    fetch(apiUrl)
-      .then((response) => response.json())
-      .then((data) => {
-        setRepos(data.items || []);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-        setLoading(false);
-      });
-  }, [apiUrl]);
+  const {
+    data,
+    error,
+    isLoading,
+    fetchNextPage,
+    hasNextPage,
+    isFetchingNextPage,
+  } = useInfiniteQuery(
+    ["Repo", lang],
+    async ({ pageParam = 1 }) => {
+      const response = await fetchRepo(pageParam);
+      return response;
+    },
+    {
+      getNextPageParam: (_, next) => {
+        return next.length + 1;
+      },
+    }
+  );
+
+  if (error) console.log(error);
 
   return (
     <div className="container mx-auto h-full pt-16">
-    <div className="min-h-screen pt-5">
-
-    <div className="text-center">
-            <div className="w-5/6 max-w-md mx-auto mb-10">
+      <div className="min-h-screen pt-5">
+        <div className="text-center">
+          <div className="w-5/6 max-w-md mx-auto mb-10">
             <h1 className="mb-2 mt-10 text-4xl font-mono">
-            Repositories for : 
+              Repositories for :
             </h1>
             <p className="btn btn-ghost normal-case  font-bold text-5xl text-primary">
               <AnimatedText lang={lang} />
             </p>
-            </div>
-        
-      
-      {loading ? (
-        <p className="text-center">Loading...</p>
-      ) : (
-  
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {Array.isArray(repos) && repos.length > 0 ? (
-            repos.map((repo) => (
-              <RepoCard repo={repo} key={repo.id}/>
-            ))
-          ) : (
-            <p>No repositories found.</p>
-          )}
+          </div>
+          {error && <ThrowError error={error} />}
+          {isLoading && <p className="text-center">Loading...</p>}
+          {error && <p>Oops something went wrong</p>}
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {data &&
+              data.pages.map((page) =>
+                page?.map((repo) => <RepoCard repo={repo} key={repo.id} />)
+              )}
+          </div>
         </div>
-     
-      )}
       </div>
-      </div>
+
       <div className="w-full flex flex-row gap-4 justify-center items-center">
-      <button className="btn  btn-primary my-10 ">Next Page</button>
-      <Link to='/' className="btn  btn-secondary my-10 ">Go Home</Link>
+        <button
+          className="btn  btn-primary my-10 "
+          onClick={() => fetchNextPage()}
+        >
+          {" "}
+          {isFetchingNextPage
+            ? "Loading more..."
+            : hasNextPage
+            ? "Next Page"
+            : "Nothing more to load"}
+        </button>
+        <Link to="/" className="btn  btn-secondary my-10 ">
+          Go Home
+        </Link>
       </div>
-      
-      </div>
-   
+    </div>
   );
 };
 
 export default RepoList;
-
