@@ -17,7 +17,7 @@ const NavBar = (props) => {
   });
 
   return (
-    <div className="navbar bg-base-100 fixed shadow-md p-1 z-10 " ref={ref}>
+    <div className="navbar bg-base-100 fixed shadow-md p-1 z-10 ">
       <div className="flex-1">
         <Link for="/" className="btn btn-ghost normal-case text-xl">
           🏆 hacktoberHub
@@ -36,7 +36,7 @@ const NavBar = (props) => {
           Contribute
         </a>
         <li>
-          <details id="detailElem">
+          <details id="detailElem" ref={ref}>
             <summary>Themes</summary>
             <ul className="p-2 bg-base-100">
               <li>
