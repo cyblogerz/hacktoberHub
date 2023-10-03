@@ -6,7 +6,7 @@ import { GoStar, GoRepoForked } from 'react-icons/go';
 
 function RepoCard({repo}) {
   return (
-    <div className="shadow-sm card bg-2023-void-2 ring-1 ring-2023-manga-3">
+    <div className="shadow-sm hover:shadow-2xl hover:bg-black hover:scale-105 transform transition-transform duration-300 card bg-2023-void-2 ring-1 ring-2023-manga-3">
       <div className="relative card-body">
         <div className="avatar">
           <div className="w-10 h-10 mb-2 rounded-full">
