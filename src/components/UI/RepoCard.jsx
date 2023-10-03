@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
-import { GoStar, GoRepoForked } from 'react-icons/go';
+import {  GoRepoForked } from 'react-icons/go';
+import {AiTwotoneStar} from 'react-icons/ai'
 
 
 
@@ -57,11 +58,11 @@ function RepoCard({repo}) {
           ))}
         </div>
 
-        <div className="items-end justify-center h-full card-actions">
+        <div className="items-end justify-center h-full card-actions mt-10">
           <div className="shadow stats bg-transparent ring-1 ">
             <div className="stat">
               <div className="text-center stat-title items-center inline-flex">
-                <GoStar /> <span className="ml-0.5">Stars</span>
+                <AiTwotoneStar className='text-yellow-500'/> <span className="ml-0.5">Stars</span>
               </div>
               <div className="text-center stat-value">
                 {repo.stargazers_count}
