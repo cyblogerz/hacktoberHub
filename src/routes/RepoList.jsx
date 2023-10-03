@@ -5,6 +5,7 @@ import RepoCard from "../components/UI/RepoCard";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import axios from "axios";
 import RepoListHeader from "../components/RepoListHeader";
+import BackToTopButton from "../components/UI/BackToTopButton";
 
 const ThrowError = ({ error }) => {
   if (
@@ -85,6 +86,7 @@ const RepoList = () => {
         <Link to="/" className="btn  btn-secondary my-10 ">
           Go Home
         </Link>
+        <BackToTopButton />
       </div>
     </div>
   );
