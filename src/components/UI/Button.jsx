@@ -11,17 +11,15 @@ import { Link } from "react-router-dom"
 const Button = ({lang}) => { 
     // const IconComponent = getIconComponent(lang)
   return (
-    <div className="relative group m-3 w-fit inline-block">
-  <div className="absolute -inset-0 group-hover:bg-purple-500 via-blue-500 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 
-  group-hover:duration-200"></div>
+
   <Link to={`/repos/${lang}`}>
   <button
-    className='font-mono relative p-6  btn btn-lg  rounded-2xl leading-none transition duration-300 ring-2 ring-transparent hover:ring-blue-500 hover:shadow-md'
+    className='btn btn-neutral font-mono text-lg'
   >
     {lang}
   </button>
   </Link>
-</div>
+
 
   )
 }
