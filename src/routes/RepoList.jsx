@@ -55,14 +55,14 @@ const RepoList = () => {
   if (error) console.log(error);
 
   return (
-    <div className="container mx-auto h-full pt-16">
+    <div className="container mx-auto h-full pt-16 sm:mx-0">
       <div className="min-h-screen pt-5">
         <div className="text-center">
           <RepoListHeader lang={lang}/>
           {error && <ThrowError error={error} />}
           {isLoading && <div className = "w-full flex flex-row gap-4 justify-center items-center"><img src="/loader.gif" alt="loader image" width = "200" /></div> }
           {error && <p>Oops something went wrong</p>}
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 grid-cols-3 sm:grid-cols-1 md:grid-cols-2">
             {data &&
               data.pages.map((page) =>
                 page?.map((repo) => <RepoCard repo={repo} key={repo.id} />)

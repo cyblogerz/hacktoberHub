@@ -8,7 +8,7 @@ const MarqueeButtons = () => {
     const { main: mainLanguages } = languages
     
   return (
-    <div className="flex items-center justify-center w-[65%] ">
+    <div className="flex items-center justify-center max-w-[65%] ">
  
   <div className="items-center justify-center flex flex-wrap">
     {mainLanguages.map((lang) => {

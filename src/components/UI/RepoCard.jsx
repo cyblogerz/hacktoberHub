@@ -6,8 +6,9 @@ import { GoStar, GoRepoForked } from 'react-icons/go';
 
 function RepoCard({repo}) {
   return (
-    <div className="shadow-sm card bg-2023-void-2 ring-1 ring-2023-manga-3">
+    <div className="shadow-sm card bg-2023-void-2 ring-1 ring-2023-manga-3 sm:w-[100vw]">
       <div className="relative card-body">
+        <div className='flex items-center justify-center'>
         <div className="avatar">
           <div className="w-10 h-10 mb-2 rounded-full">
             <a
@@ -32,11 +33,11 @@ function RepoCard({repo}) {
           title={repo.name}
           target="_blank"
           rel="noreferrer"
-          className={`text-3xl card-title link link-hover text-2023-bavarian-gold-2`}
+          className={`text-3xl card-title link link-hover text-2023-bavarian-gold-2 sm:text-2xl sm:ml-1`}
         >
           {repo.name}
         </a>
-
+        </div>
         <p className="mb-2">{repo.description}</p>
 
         <div className="card-actions">
