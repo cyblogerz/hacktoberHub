@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@tanstack/react-query": "^4.35.7",
+    "@uidotdev/usehooks": "^2.3.1",
     "animejs": "^3.2.1",
     "axios": "^1.5.1",
     "prop-types": "^15.8.1",
