@@ -60,7 +60,7 @@ const RepoList = () => {
         <div className="text-center">
           <RepoListHeader lang={lang}/>
           {error && <ThrowError error={error} />}
-          {isLoading && <p className="text-center">Loading...</p>}
+          {isLoading && <div className = "w-full flex flex-row gap-4 justify-center items-center"><img src="/loader.gif" alt="loader image" width = "200" /></div> }
           {error && <p>Oops something went wrong</p>}
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {data &&
