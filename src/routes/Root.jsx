@@ -32,7 +32,7 @@ const Root = () => {
   }, []);
   
   return (
-    <div data-theme={theme} className='min-h-screen font-mono'>
+    <div data-theme={theme} className='min-h-screen  overflow-x-hidden'>
     <NavBar  onThemeChange={themeHandler}/>
     <Outlet />
     </div>

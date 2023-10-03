@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
+
+
 const NavBar = (props) => {
   const clickHandler = (e) => {
     const { value: val, name } = e.target;
@@ -9,7 +11,12 @@ const NavBar = (props) => {
     <div className="navbar bg-base-100 fixed shadow-md p-1 z-10 ">
       <div className="flex-1">
         <Link for="/" className="btn btn-ghost normal-case text-xl">
-          🏆 hacktoberHub
+        <h1>
+    
+  Hacktober
+  <span className="text-accent">Hub</span>
+</h1>
+
         </Link>
       </div>
 
