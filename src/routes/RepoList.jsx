@@ -1,9 +1,11 @@
-import React from "react";
+/* eslint-disable react/prop-types */
+
 import { Link, useParams } from "react-router-dom";
 import RepoCard from "../components/UI/RepoCard";
-import AnimatedText from "../components/UI/AnimatedText";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import axios from "axios";
+import RepoListHeader from "../components/RepoListHeader";
+import BackToTopButton from "../components/UI/BackToTopButton";
 
 const ThrowError = ({ error }) => {
   if (
@@ -56,14 +58,7 @@ const RepoList = () => {
     <div className="container mx-auto h-full pt-16 sm:mx-0">
       <div className="min-h-screen pt-5">
         <div className="text-center">
-          <div className="w-5/6 max-w-md mx-auto mb-10 sm:flex sm:items-center sm:flex-col">
-            <h1 className="mb-2 mt-10 text-4xl font-mono sm:text-xl">
-              Repositories for :
-            </h1>
-            <p className="btn btn-ghost normal-case  font-bold text-5xl text-primary sm:text-xl">
-              <AnimatedText lang={lang} />
-            </p>
-          </div>
+          <RepoListHeader lang={lang}/>
           {error && <ThrowError error={error} />}
           {isLoading && <p className="text-center">Loading...</p>}
           {error && <p>Oops something went wrong</p>}
@@ -91,6 +86,7 @@ const RepoList = () => {
         <Link to="/" className="btn  btn-secondary my-10 ">
           Go Home
         </Link>
+        <BackToTopButton />
       </div>
     </div>
   );

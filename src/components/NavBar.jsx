@@ -3,9 +3,6 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom'
 const NavBar = (props) => {
 
-  const [active, setActive] = useState("Home");
-  const [toggle, setToggle] = useState(false);
-
   const clickHandler = (e) => {
     const { value: val, name } = e.target
     props.onThemeChange(val, name)
@@ -19,7 +16,9 @@ const NavBar = (props) => {
         <summary className="m-1 btn">Menu</summary>
         <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
           <Link to="/blogs/" className="btn  normal-case btn-ghost">Blogs</Link>
-          <li><a className="btn  normal-case btn-ghost">Contribute</a></li>
+          <li><a  className="btn  normal-case btn-ghost"
+          href={"https://github.com/cyblogerz/hacktoberHub"}
+          target="_blank">Contribute</a></li>
           <li className='flex items-center'>
             <details>
               <summary>
@@ -36,16 +35,28 @@ const NavBar = (props) => {
       </details>
       <div className="menu menu-horizontal px-1 sm:hidden">
       <Link to="/blogs/" className="btn  normal-case btn-ghost">Blogs</Link>
-     <a className="btn  normal-case btn-ghost">Contribute</a>
+     <a        className="btn  normal-case btn-ghost"
+          href={"https://github.com/cyblogerz/hacktoberHub"}
+          target="_blank">Contribute</a>
         <li>
           <details>
-            <summary>
-              Themes
-            </summary>
+            <summary>Themes</summary>
             <ul className="p-2 bg-base-100">
-              <li><button className='' onClick={clickHandler} name='dark'>Dark</button></li>
-              <li><button className='' onClick={clickHandler} name='light'>Light</button></li>
-              <li><button className='' onClick={clickHandler} name='cupcake'>Cupcake</button></li>
+              <li>
+                <button className="" onClick={clickHandler} name="dark">
+                  Dark
+                </button>
+              </li>
+              <li>
+                <button className="" onClick={clickHandler} name="light">
+                  Light
+                </button>
+              </li>
+              <li>
+                <button className="" onClick={clickHandler} name="cupcake">
+                  Cupcake
+                </button>
+              </li>
             </ul>
           </details>
         </li>
@@ -56,4 +67,4 @@ const NavBar = (props) => {
   )
 }
 
-export default NavBar
+export default NavBar;

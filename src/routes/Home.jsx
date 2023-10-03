@@ -17,7 +17,7 @@ const Home = () => {
     
     <div className="mb-20 text-center w-[80%] sm:py-4 sm:mb-2">
     <p className="text-6xl sm:text-3xl">🧑🏻‍💻</p>
-        <h1 className="text-5xl font-bold sm:text-2xl">Select your </h1>
+        <h1 className="text-5xl sm:text-2xl">Select your </h1>
         <GradientText text="programming language" />
    
         <p className="mt-4 text-sm ">Discover exciting repositories to contribute to in this year&apos;s<span className="underline "> Hacktoberfest! </span> 🚀🌟</p>

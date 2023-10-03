@@ -49,7 +49,7 @@ function RepoCard({repo}) {
               rel="noreferrer"
               className={`badge  ${
     topic === 'hacktoberfest'
-      ? 'badge-secondary'
+      ? 'badge-accent'
       : 'badge-primary'
   }`}
             >
