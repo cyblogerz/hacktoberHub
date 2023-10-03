@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable react/prop-types */
 import { useClickAway } from "@uidotdev/usehooks";
 import { Link } from "react-router-dom";
@@ -5,6 +6,7 @@ const NavBar = (props) => {
   const clickHandler = (e) => {
     const { value: val, name } = e.target;
     props.onThemeChange(val, name);
+    // eslint-disable-next-line no-undef
     detailElem.removeAttribute("open");
   };
 

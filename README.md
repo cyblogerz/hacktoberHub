@@ -16,7 +16,8 @@ This website simplifies your Hacktoberfest journey by providing an easy-to-navig
 - **Themes**: Choose from a variety of themes to match your style
 
 
-
+### Screenshots
+![Alt text](image.png)
 ## Getting Started
 
 1. Visit the [hacktoberHub](https://hacktoberhub.netlify.app) website.
