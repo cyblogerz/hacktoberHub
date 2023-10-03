@@ -1,12 +1,20 @@
 /* eslint-disable react/prop-types */
+import { useClickAway } from "@uidotdev/usehooks";
 import { Link } from "react-router-dom";
-
-
 const NavBar = (props) => {
   const clickHandler = (e) => {
     const { value: val, name } = e.target;
     props.onThemeChange(val, name);
+    detailElem.removeAttribute("open");
   };
+
+  const ref = useClickAway(() => {
+    const detailElem = document.querySelector("#detailElem");
+    if (detailElem.hasAttribute("open")) {
+      detailElem.removeAttribute("open");
+    }
+  });
+
   return (
     <div className="navbar bg-base-100 fixed shadow-md p-1 z-10 ">
       <div className="flex-1">
@@ -32,7 +40,7 @@ const NavBar = (props) => {
           Contribute
         </a>
         <li>
-          <details>
+          <details id="detailElem" ref={ref}>
             <summary>Themes</summary>
             <ul className="p-2 bg-base-100">
               <li>
