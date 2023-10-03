@@ -53,21 +53,21 @@ const RepoList = () => {
   if (error) console.log(error);
 
   return (
-    <div className="container mx-auto h-full pt-16">
+    <div className="container mx-auto h-full pt-16 sm:mx-0">
       <div className="min-h-screen pt-5">
         <div className="text-center">
-          <div className="w-5/6 max-w-md mx-auto mb-10">
-            <h1 className="mb-2 mt-10 text-4xl font-mono">
+          <div className="w-5/6 max-w-md mx-auto mb-10 sm:flex sm:items-center sm:flex-col">
+            <h1 className="mb-2 mt-10 text-4xl font-mono sm:text-xl">
               Repositories for :
             </h1>
-            <p className="btn btn-ghost normal-case  font-bold text-5xl text-primary">
+            <p className="btn btn-ghost normal-case  font-bold text-5xl text-primary sm:text-xl">
               <AnimatedText lang={lang} />
             </p>
           </div>
           {error && <ThrowError error={error} />}
           {isLoading && <p className="text-center">Loading...</p>}
           {error && <p>Oops something went wrong</p>}
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 grid-cols-3 sm:grid-cols-1 md:grid-cols-2">
             {data &&
               data.pages.map((page) =>
                 page?.map((repo) => <RepoCard repo={repo} key={repo.id} />)

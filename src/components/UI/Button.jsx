@@ -16,7 +16,7 @@ const Button = ({lang}) => {
   group-hover:duration-200"></div>
   <Link to={`/repos/${lang}`}>
   <button
-    className='font-mono relative p-6  btn btn-lg  rounded-2xl leading-none transition duration-300 ring-2 ring-transparent hover:ring-blue-500 hover:shadow-md'
+    className='font-mono relative p-6  btn btn-lg  rounded-2xl leading-none transition duration-300 ring-2 ring-transparent hover:ring-blue-500 hover:shadow-md sm:text-sm sm:max-w-md '
   >
     {lang}
   </button>
