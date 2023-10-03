@@ -6,7 +6,7 @@ import { GoStar, GoRepoForked } from 'react-icons/go';
 
 function RepoCard({repo}) {
   return (
-    <div className="shadow-sm hover:shadow-2xl hover:bg-black hover:scale-105 transform transition-transform duration-300 card bg-2023-void-2 ring-1 ring-2023-manga-3">
+    <div className="shadow-sm hover:shadow-2xl hover:bg-black hover:scale-105 transform transition-transform duration-300 card  ring-1">
       <div className="relative card-body">
         <div className="avatar">
           <div className="w-10 h-10 mb-2 rounded-full">
@@ -32,7 +32,7 @@ function RepoCard({repo}) {
           title={repo.name}
           target="_blank"
           rel="noreferrer"
-          className={`text-3xl card-title link link-hover text-2023-bavarian-gold-2`}
+          className={`text-3xl card-title link link-hover `}
         >
           {repo.name}
         </a>
@@ -58,7 +58,7 @@ function RepoCard({repo}) {
         </div>
 
         <div className="items-end justify-center h-full card-actions">
-          <div className="shadow stats bg-transparent ring-1 ring-2023-manga-2">
+          <div className="shadow stats bg-transparent ring-1 ">
             <div className="stat">
               <div className="text-center stat-title items-center inline-flex">
                 <GoStar /> <span className="ml-0.5">Stars</span>
@@ -68,7 +68,7 @@ function RepoCard({repo}) {
               </div>
             </div>
           </div>
-          <div className="shadow stats bg-transparent ring-1 ring-2023-manga-2">
+          <div className="shadow stats bg-transparent ring-1 ">
             <div className="stat">
               <div className="text-center stat-title items-center inline-flex">
                 <GoRepoForked /> <span className="ml-0.5">Forks</span>
