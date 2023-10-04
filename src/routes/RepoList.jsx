@@ -58,15 +58,15 @@ const RepoList = () => {
     <div className="container mx-auto h-full pt-16">
       <div className="min-h-screen pt-5">
         <div className="text-center">
-          <RepoListHeader lang={lang}/>
-          {error && <ThrowError error={error} />}
-          {isLoading && <div className = "w-full flex flex-row gap-4 justify-center items-center"><img src="/loader.gif" alt="loader image" width = "200" /></div> }
-          {error && <p>Oops something went wrong</p>}
+          <RepoListHeader lang={ lang } />
+          { error && <ThrowError error={ error } /> }
+          { isLoading && <div className="w-full flex flex-row gap-4 justify-center items-center"><img src="/loader.gif" alt="loader image" width="200" /></div> }
+          { error && <p>Oops something went wrong</p> }
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {data &&
+            { data &&
               data.pages.map((page) =>
-                page?.map((repo) => <RepoCard repo={repo} key={repo.id} />)
-              )}
+                page?.map((repo) => <RepoCard repo={ repo } key={ repo.id } />)
+              ) }
           </div>
         </div>
       </div>
@@ -74,14 +74,14 @@ const RepoList = () => {
       <div className="w-full flex flex-row gap-4 justify-center items-center">
         <button
           className="btn  btn-primary my-10 "
-          onClick={() => fetchNextPage()}
+          onClick={ () => fetchNextPage() }
         >
-          {" "}
-          {isFetchingNextPage
+          { " " }
+          { isFetchingNextPage
             ? "Loading more..."
             : hasNextPage
-            ? "Next Page"
-            : "Nothing more to load"}
+              ? "View More"
+              : "Nothing more to load" }
         </button>
         <Link to="/" className="btn  btn-secondary my-10 ">
           Go Home
