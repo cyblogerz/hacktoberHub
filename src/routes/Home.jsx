@@ -18,7 +18,7 @@ const Home = () => {
         <div className="  w-[80%]">
           <div>
             <a href="https://hacktoberfest.com" className="badge badge-neutral rounded-4xl font-mono">hacktoberfest.com</a>
-            <p className="text-6xl text-left font-bold dark:text-[white] light:">
+            <p className="text-6xl text-left font-bold dark:text-{#2b3440} dark:text-[white] light:">
               Find your perfect <br />
               <GradientText text={ 'Hacktoberfest Project' } />  <br />
               and contribute today
