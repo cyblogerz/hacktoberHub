@@ -16,6 +16,10 @@ export default {
   plugins: [daisyui],
 
   daisyui: {
-    themes: ["light", "dark", "cupcake"],
+    themes: ["light", {
+      dark: {
+        ...require("daisyui/src/theming/themes")["[data-theme=dark]"],
+        "base-300": 'black'
+    }}, "cupcake"],
   },
 }
