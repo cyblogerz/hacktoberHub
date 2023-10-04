@@ -62,7 +62,7 @@ const RepoList = () => {
           { error && <ThrowError error={ error } /> }
           { isLoading && <div className="w-full flex flex-row gap-4 justify-center items-center"><img src="/loader.gif" alt="loader image" width="200" /></div> }
           { error && <p>Oops something went wrong</p> }
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 mx-3 md:mx-0 gap-5  md:gap-8 md:grid-cols-2 lg:grid-cols-3">
             { data &&
               data.pages.map((page) =>
                 page?.map((repo) => <RepoCard repo={ repo } key={ repo.id } />)
