@@ -27,7 +27,7 @@ const Home = () => {
 
 
 
-          <p className="mt-4 text-lg w-[95%]  ">Discover exciting repositories to contribute to in this year&apos;s<span className="underline "> Hacktoberfest! </span> </p>
+          <p className="mt-4 text-lg w-[95%]  ">Discover exciting repositories to contribute to in this year&apos;s<a href='https://hacktoberfest.com/' target='blank' className="underline hover:text-blue-500"> Hacktoberfest! </a> </p>
           <div className="flex flex-row mt-16 gap-4 w-[80%] ">
             <OtherLangButton /><button className="btn  btn normal-case text-xl w-1/2">Resources <AiOutlineArrowRight /></button></div>
         </div>
