@@ -7,7 +7,7 @@ import { AiTwotoneStar } from 'react-icons/ai'
 
 function RepoCard ({ repo }) {
   return (
-    <div className="shadow-sm hover:shadow-2xl  hover:bg-black hover:scale-105 transform transition-transform duration-300 card  ring-1">
+    <div className="shadow-sm hover:shadow-2xl hover:bg-base-300 hover:bg-blacks hover:bg-hover-card hover:scale-105 transform transition-transform duration-300 card ring-1">
       <div className="relative card-body">
         <div className="avatar">
           <div className="w-10 h-10 mb-2 rounded-full">
