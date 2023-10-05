@@ -15,7 +15,7 @@ const Home = () => {
 
       <div className="flex  flex-row items-center justify-center min-h-screen  gap-10 ">
 
-        <div className="  w-[80%]">
+        <div className="  w-[80%] px-5">
           <div>
             <a href="https://hacktoberfest.com" className="badge badge-neutral rounded-4xl font-mono">hacktoberfest.com</a>
             <p className="text-6xl text-left font-bold dark:text-[white] light:">
