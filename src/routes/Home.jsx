@@ -11,7 +11,7 @@ import { AiOutlineArrowRight } from 'react-icons/ai'
 const Home = () => {
 
   return (
-    <div className='container mx-auto w-full h-full '>
+    <div className='container mx-auto w-full h-full  mt-6'>
 
       <div className="flex  flex-row items-center justify-center min-h-screen  gap-10 ">
 
