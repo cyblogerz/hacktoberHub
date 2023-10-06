@@ -1,8 +1,8 @@
 /* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable react/prop-types */
-import MenuIcon from '@mui/icons-material/Menu';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
+import { RxHamburgerMenu } from "react-icons/rx"
+import { BiSolidUpArrow, BiSolidDownArrow } from "react-icons/bi"
+
 import { useClickAway } from "@uidotdev/usehooks";
 import React from "react";
 import { Link } from "react-router-dom";
@@ -79,7 +79,7 @@ const NavBar = (props) => {
           </li>
         </div>
         <div className="md:hidden ">
-          <div className="md:hidden mr-5  relative" onClick={ navOpenHandler }><MenuIcon /></div>
+          <div className="md:hidden mr-5  relative" onClick={ navOpenHandler }><RxHamburgerMenu size={ 26 } /></div>
           { navOpen &&
             <div className="absolute left-[71%] top-16 flex flex-col translate-x-10 transition-transform">
               <Link to="/blogs/" className=" font-semibold normal-case btn-ghost">
@@ -94,7 +94,7 @@ const NavBar = (props) => {
               </a>
 
               <details open={ themOpen }>
-                <summary className='font-semibold list-none' onClick={ () => setthemOpen(!themOpen) }  >Themes { themOpen ? <ArrowDropDownIcon /> : <ArrowDropUpIcon /> } </summary>
+                <summary className='font-semibold flex justify-center items-center gap-1 list-none' onClick={ () => setthemOpen(!themOpen) }  >Themes{ !themOpen ? <BiSolidDownArrow size={ 12 } /> : <BiSolidUpArrow size={ 12 } /> } </summary>
                 <ul className=" bg-slate-200">
                   <li>
                     <button className="" onClick={ clickHandler } name="dark">
