@@ -2,8 +2,8 @@ import WindowChild from '../WindowChild';
 
 const MockupWindow = () => {
     return (
-        <div className="transform translate-x relative px-5 ">
-            <div className="absolute inset-0 bg-gradient-to-r from-gray-400 to-transparent opacity-20 blur-lg "></div>
+        <div className=" px-10 ">
+            
             <div className="h-[60vh] w-[50vw] flex">
                 <div className="mockup-browser  bg-base-300">
                     <div className="mockup-browser-toolbar">
