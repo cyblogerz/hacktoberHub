@@ -11,14 +11,14 @@ import { AiOutlineArrowRight } from 'react-icons/ai'
 const Home = () => {
 
   return (
-    <div className='container   xl:mt-16'>
 
-      <div className="flex  flex-row items-center justify-between  w-screen min-h-screen  gap-10 ">
 
-        <div className="  px-5">
+      <div className="flex  flex-row items-center justify-between  w-screen min-h-screen  ">
+
+        <div className="  px-20">
           <div>
             <a href="https://hacktoberfest.com" className="badge badge-neutral rounded-4xl font-mono">hacktoberfest.com</a>
-            <p className="text-6xl text-left font-bold dark:text-[white] light:">
+            <p className="2xl:text-6xl text-left text-5xl font-bold dark:text-[white] light:">
               Find your perfect <br />
               <GradientText text={ 'Hacktoberfest Project' } />  <br />
               and contribute today
@@ -35,7 +35,7 @@ const Home = () => {
 
 
       </div>
-    </div>
+
   )
 }
 

@@ -2,10 +2,10 @@ import WindowChild from '../WindowChild';
 
 const MockupWindow = () => {
     return (
-      
-
+        <div className=" px-10 ">
+            
             <div className="h-[60vh] w-[50vw] flex">
-                <div className="mockup-browser  bg-base-300 shadow-lg">
+                <div className="mockup-browser  bg-base-300">
                     <div className="mockup-browser-toolbar">
                         <div className="input">https://hacktoberfest.com</div>
                     </div>
@@ -14,7 +14,7 @@ const MockupWindow = () => {
                     </div>
                 </div>
             </div>
-    
+        </div>
     );
 };
 
