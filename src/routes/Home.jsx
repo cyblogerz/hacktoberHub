@@ -31,7 +31,7 @@ const Home = () => {
           <p className="mt-4 text-lg w-[95%]  ">Discover exciting repositories to contribute to in this year&apos;s<a href='https://hacktoberfest.com/' target='blank' className="underline hover:text-blue-500"> Hacktoberfest! </a> </p>
           <div className="flex flex-row mt-16 md:block absolute ">
             <OtherLangButton />
-            <Link to="/blogs" className="btn  btn normal-case text-xl ml-4 ">Resources <AiOutlineArrowRight /></Link></div>
+            <Link to="/blogs" className="btn  btn normal-case text-xl ml-4  transform hover:scale-110">Resources <AiOutlineArrowRight /></Link></div>
         </div>
         <MockupWindow />
 

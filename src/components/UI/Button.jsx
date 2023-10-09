@@ -14,7 +14,7 @@ const Button = ({lang}) => {
 
   <Link to={`/repos/${lang}`}>
   <button
-    className='btn btn-neutral font-mono text-lg'
+    className='btn btn-neutral font-mono text-lg transform hover:scale-110 '
   >
     {lang}
   </button>
