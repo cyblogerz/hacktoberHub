@@ -9,7 +9,7 @@ const MockupWindow = () => {
                     <div className="mockup-browser-toolbar">
                         <div className="input">https://hacktoberfest.com</div>
                     </div>
-                    <div className="flex flex-col  h-full justify-center items-center px-4 py-16 ">
+                    <div className="flex flex-col  h-full justify-center items-center px-4 py-16 bg-base-200">
                         <WindowChild />
                     </div>
                 </div>
