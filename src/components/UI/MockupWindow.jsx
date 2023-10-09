@@ -4,7 +4,7 @@ const MockupWindow = () => {
     return (
         <div className="px-10 ">
             
-            <div className="h-[60vh] md:w-[50vw] w-screen mt-10 md:mt-0 mx-10">
+            <div className=" md:pt-16 md:w-[50vw] w-screen mt-10 md:mt-0 mx-10">
                 <div className="mockup-browser  bg-base-300">
                     <div className="mockup-browser-toolbar">
                         <div className="input">https://hacktoberfest.com</div>
