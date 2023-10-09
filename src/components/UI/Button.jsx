@@ -1,12 +1,27 @@
 /* eslint-disable react/prop-types */
-// import {AiFillHtml5} from 'react-icons/ai';
-// import {RiJavascriptFill} from 'react-icons/ri';
-// import {FaPython,FaRust} from 'react-icons/fa';
-// import {SiCodio,SiTypescript,SiDart,SiElixir,SiRuby} from 'react-icons/si';
-// import {TbBrandCpp,TbBrandGolang} from 'react-icons/tb';
-// import {BiLogoJava} from 'react-icons/bi';
+import {AiFillHtml5} from 'react-icons/ai';
+import {RiJavascriptFill} from 'react-icons/ri';
+import {FaPython,FaRust} from 'react-icons/fa';
+import {SiCodio,SiTypescript,SiDart,SiElixir,SiRuby} from 'react-icons/si';
+import {TbBrandCpp,TbBrandGolang} from 'react-icons/tb';
+import {BiLogoJava} from 'react-icons/bi';
 
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+
+const ICONS = {
+      "JavaScript":<RiJavascriptFill/>,
+      "Python":<FaPython/>,
+      "C":<SiCodio/>,
+      "C++":<TbBrandCpp/>,
+      "Rust":<FaRust/>,
+      "HTML":<AiFillHtml5/>,
+      "TypeScript":<SiTypescript/>,
+      "GoLang":<TbBrandGolang/>,
+      "Dart":<SiDart/>,
+      "Java":<BiLogoJava/>,
+      "Elixir":<SiElixir/>,
+      "Ruby":<SiRuby/>
+}
 
 const Button = ({lang}) => { 
     // const IconComponent = getIconComponent(lang)
@@ -16,6 +31,7 @@ const Button = ({lang}) => {
   <button
     className='btn btn-neutral font-mono text-lg transform hover:scale-110 '
   >
+    {ICONS[lang]}
     {lang}
   </button>
   </Link>
