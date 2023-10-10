@@ -80,8 +80,8 @@ const NavBar = (props) => {
         </div>
         <div className="md:hidden ">
           <div className="md:hidden mr-5  relative" onClick={ navOpenHandler }><RxHamburgerMenu size={ 26 } /></div>
-          { navOpen &&
-            <div className="absolute left-[71%] top-16 flex flex-col translate-x-10 transition-transform">
+          
+            <div className={`absolute left-0 top-16 ${navOpen ? "translate-x-[0] opacity-100" : "translate-x-[100vw] opacity-0"} flex flex-col w-full px-4 py-8 justify-center items-center gap-2 backdrop-blur-3xl transition-all duration-500 ease-in-out`}>
               <Link to="/blogs/" className=" font-semibold normal-case btn-ghost">
                 Blogs
               </Link>
@@ -95,26 +95,26 @@ const NavBar = (props) => {
 
               <details open={ themOpen }>
                 <summary className='font-semibold flex justify-center items-center gap-1 list-none' onClick={ () => setthemOpen(!themOpen) }  >Themes{ !themOpen ? <BiSolidDownArrow size={ 12 } /> : <BiSolidUpArrow size={ 12 } /> } </summary>
-                <ul className=" bg-slate-200">
+                <ul className=" ">
                   <li>
-                    <button className="" onClick={ clickHandler } name="dark">
+                    <button className="text-gray-500 text-center mt-2 w-full" onClick={ clickHandler } name="dark">
                       Dark
                     </button>
                   </li>
                   <li>
-                    <button className="" onClick={ clickHandler } name="light">
+                    <button className="text-gray-500 text-center mt-2 w-full" onClick={ clickHandler } name="light">
                       Light
                     </button>
                   </li>
                   <li>
-                    <button className="" onClick={ clickHandler } name="cupcake">
+                    <button className="text-gray-500 text-center mt-2 w-full" onClick={ clickHandler } name="cupcake">
                       Cupcake
                     </button>
                   </li>
                 </ul>
               </details>
             </div>
-          }
+          
         </div>
       </div>
     </>
