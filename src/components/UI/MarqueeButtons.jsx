@@ -1,6 +1,7 @@
 import Button from '../UI/Button';
 import languages from '../data/languages.json';
 
+
 const MarqueeButtons = () => {
     const { main: mainLanguages } = languages;
 
