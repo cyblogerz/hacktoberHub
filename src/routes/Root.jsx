@@ -32,7 +32,7 @@ const Root = () => {
   }, []);
   
   return (
-    <div data-theme={theme} >
+    <div data-theme={theme} className='max-w-[100vw] overflow-hidden' >
     <NavBar  onThemeChange={themeHandler}/>
     <Outlet />
     </div>
