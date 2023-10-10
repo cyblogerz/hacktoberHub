@@ -29,11 +29,6 @@ This website simplifies your Hacktoberfest journey by providing an easy-to-navig
 
 We welcome contributions to enhance this project. If you have ideas for improvements, bug fixes, or new features, please feel free to [create an issue](#) or submit a pull request.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
 
 Start your Hacktoberfest journey with the HacktoberHub! 🌟
 
