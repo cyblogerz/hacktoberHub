@@ -17,9 +17,10 @@ const MockupWindow = () => {
     setIsSearchModalOpen(false);
   };
   return (
-    <div className="px-10 ">
-      <div className=" md:pt-16 md:w-[50vw] w-screen mt-10 md:mt-0 mx-10">
-        <div className="mockup-browser  bg-base-300">
+    
+    <div className="px-10">
+      <div className=" md:pt-16 md:w-[50vw]  w-screen mt-10 md:mt-0 mx-10">
+        <div className="mockup-browser  bg-base-300 md:h-[600px]">
           <div className="text-5xl absolute w-fit ml-3  h-[50px] p-1">
             <BiDotsHorizontalRounded color={"grey"} />
           </div>
